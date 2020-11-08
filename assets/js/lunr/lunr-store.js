@@ -33,7 +33,7 @@ var store = [{
         "excerpt":"I turned iCloud Photo Library on this week. We have close to 250 GB of photos, videos in several different computers and mobile devices. You might have guessed it: it flooded our network since our outbound internet peaks around 6 Mbs (realistically). I needed to do something. I have at...","categories": ["general"],
         "tags": ["apple","icloud","network","tips"],
         "url": "/general/icloud-photos-meraki-and-traffic-shaping/",
-        "teaser": "/assets/img/emre.png"
+        "teaser": "/assets/img/Screen-Shot-2017-09-25-at-4.39.41-PM.png"
       },{
         "title": "Air Quality Index Bot",
         "excerpt":"After the devastating Northern California wildfires, I found myself looking at AirNow multiple times a day. Also at work, like many Bay Area tech companies, we use HipChat (or Slack). Naturally I was inclined to issue a slash command to get the latest air quality index (AQI) for my area in...","categories": ["general"],
