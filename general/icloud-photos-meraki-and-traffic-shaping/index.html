@@ -1,0 +1,757 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>iCloud Photos, Meraki and Traffic Shaping MD - eBlog</title>
+<meta name="description" content="I turned iCloud Photo Library on this week. We have close to 250 GB of photos, videos in several different computers and mobile devices. You might have guessed it: it flooded our network since our outbound internet peaks around 6 Mbs (realistically). I needed to do something.">
+
+
+  <meta name="author" content="Emre Sağlam">
+  
+  <meta property="article:author" content="Emre Sağlam">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="eBlog">
+<meta property="og:title" content="iCloud Photos, Meraki and Traffic Shaping MD">
+<meta property="og:url" content="http://localhost:4000/general/icloud-photos-meraki-and-traffic-shaping/">
+
+
+  <meta property="og:description" content="I turned iCloud Photo Library on this week. We have close to 250 GB of photos, videos in several different computers and mobile devices. You might have guessed it: it flooded our network since our outbound internet peaks around 6 Mbs (realistically). I needed to do something.">
+
+
+
+
+
+  <meta name="twitter:site" content="@emresaglam">
+  <meta name="twitter:title" content="iCloud Photos, Meraki and Traffic Shaping MD">
+  <meta name="twitter:description" content="I turned iCloud Photo Library on this week. We have close to 250 GB of photos, videos in several different computers and mobile devices. You might have guessed it: it flooded our network since our outbound internet peaks around 6 Mbs (realistically). I needed to do something.">
+  <meta name="twitter:url" content="http://localhost:4000/general/icloud-photos-meraki-and-traffic-shaping/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2017-09-25T19:25:42-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/general/icloud-photos-meraki-and-traffic-shaping/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Emre Sağlam",
+      "url": "http://localhost:4000/",
+      "sameAs": ["https://twitter.com/emresaglam","https://linkedin.com/in/emresaglam"]
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="eBlog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/img/emre.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          eBlog
+          <span class="site-subtitle">v4.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/img/emre.png" alt="Emre Sağlam" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Emre Sağlam</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Some person</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">San Francisco Bay Area</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+            <li><a href="https://emresaglam.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/emresaglam" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/emresaglam" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="iCloud Photos, Meraki and Traffic Shaping MD">
+    <meta itemprop="description" content="I turned iCloud Photo Library on this week. We have close to 250 GB of photos, videos in several different computers and mobile devices. You might have guessed it: it flooded our network since our outbound internet peaks around 6 Mbs (realistically). I needed to do something.">
+    <meta itemprop="datePublished" content="2017-09-25T19:25:42-07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">iCloud Photos, Meraki and Traffic Shaping MD
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2017-09-25T19:25:42-07:00">September 25, 2017</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>I turned <a href="https://www.apple.com/icloud/photos/">iCloud Photo Library</a> on this week. We have close to 250 GB of photos, videos in several different computers and mobile devices. You might have guessed it: it flooded our network since our outbound internet peaks around 6 Mbs (realistically). I needed to do something.</p>
+
+<p>I have at home a <a href="https://meraki.cisco.com/products/appliances/mx65">Meraki MX65</a> and a <a href="https://meraki.cisco.com/products/wireless/mr42">MR42</a> (Thanks Dağhan ;) ) They give great visibility and control over our home network. I can easily pinpoint where the problem is and take actions. Here is a great chart that shows how the nature of our traffic changed on Sep 24 after turning iCloud Photo Library on. (See the light blue? That’s increased upload!)</p>
+
+<p><a href="/assets/img/Screen-Shot-2017-09-25-at-4.39.41-PM.png"><img src="/assets/img/Screen-Shot-2017-09-25-at-4.39.41-PM.png" alt="" /></a></p>
+
+<p>One of the easiest way to slow this traffic down is to shape it with Meraki Traffic Shaping rules. <a href="https://documentation.meraki.com/MX-Z/Firewall_and_Traffic_Shaping/Traffic_Shaping_Settings">This document</a> talks about in detail how to do this. However the iCloud settings in the canned traffic shaping rules is only related to backup and doesn’t work with iCloud Photo Library traffic.</p>
+
+<p><a href="/assets/img/Screen-Shot-2017-09-25-at-4.55.37-PM.png"><img src="/assets/img/Screen-Shot-2017-09-25-at-4.55.37-PM.png" alt="" /></a></p>
+
+<p>Meraki allows you to do application layer or layer 3 traffic shaping. Since the traffic is encrypted, the application layer traffic shaping was not an option. For layer 3, I needed the IPs that the Photos app was talking to. Since Apple owns the entire 17.0.0.0/8, it’s always an option to craft your rule using the entire <a href="https://en.wikipedia.org/wiki/Classful_network#Classful_addressing_definition">class A subnet</a>. However that wouldn’t be “elegant” :) So let’s do some tcpdump exercise.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iMac:~ user<span class="nv">$ </span><span class="nb">sudo </span>tcpdump <span class="nt">-i</span> en1 <span class="nt">-n</span> <span class="nt">-c</span> 1000 ip and net 17.0.0.0/8 | <span class="nb">grep</span> <span class="s1">'&gt;'</span>| <span class="nb">cut</span> <span class="nt">-d</span> <span class="s1">'&gt;'</span> <span class="nt">-f</span> 2 | <span class="nb">cut</span> <span class="nt">-d</span> <span class="s2">"."</span> <span class="nt">-f</span> 1-4 | <span class="nb">grep </span>17<span class="se">\\</span><span class="nb">.</span> | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> 
+tcpdump: verbose output suppressed, use <span class="nt">-v</span> or <span class="nt">-vv</span> <span class="k">for </span>full protocol decode
+listening on en1, link-type EN10MB <span class="o">(</span>Ethernet<span class="o">)</span>, capture size 262144 bytes
+1000 packets captured
+2120 packets received by filter
+0 packets dropped by kernel
+  647  17.248.128.44
+</code></pre></div></div>
+
+<p>What this tells us is that we captured 1000 packets and looked for all the ones that has “17.” in it, and counted them. In total 647 packets were transmitted to 17.248.128.44. Also it’s on port 443 only.</p>
+
+<p>I did a similar packet dump for 10K packets. Which revealed that the sync between Photos app and iCloud is always happening on subnets: 17.248.0.0/16 and 17.188.0.0/16 on port 443. (There might be a more specific subnet, but this was enough for me to start with)</p>
+
+<p>Let’s apply this to Meraki MX65 traffic shaping rules. In this rule below my upload limit per client is 1.5 Mbps. Depending on how many clients you have and your upload speed, you can come up with something more suitable for your network.</p>
+
+<p><a href="/assets/img/Screen-Shot-2017-09-25-at-7.19.52-PM.png"><img src="/assets/img/Screen-Shot-2017-09-25-at-7.19.52-PM.png" alt="" /></a></p>
+
+<p>In order to figure out how to define these in Meraki, please <a href="https://documentation.meraki.com/MX-Z/Firewall_and_Traffic_Shaping/Traffic_Shaping_Settings">follow the instructions</a> in the previous doc that I linked.</p>
+
+<p>Et Voilà! You got your home network back ;)</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#apple" class="page__taxonomy-item" rel="tag">apple</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#icloud" class="page__taxonomy-item" rel="tag">icloud</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#network" class="page__taxonomy-item" rel="tag">network</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#tips" class="page__taxonomy-item" rel="tag">tips</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#general" class="page__taxonomy-item" rel="tag">general</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-09-25T19:25:42-07:00">September 25, 2017</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=emresaglam&text=iCloud+Photos%2C+Meraki+and+Traffic+Shaping+MD%20http%3A%2F%2Flocalhost%3A4000%2Fgeneral%2Ficloud-photos-meraki-and-traffic-shaping%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fgeneral%2Ficloud-photos-meraki-and-traffic-shaping%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgeneral%2Ficloud-photos-meraki-and-traffic-shaping%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/general/icloud-photos-meraki-and-traffic-shaping/" class="pagination--pager" title="iCloud Photos, Meraki and Traffic Shaping
+">Previous</a>
+    
+    
+      <a href="/general/air_quality_index_bot/" class="pagination--pager" title="Air Quality Index Bot
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/black-and-silver-car-gear-shift-lever-437036.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/apple-watch-radio/" rel="permalink">Apple watch radio
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-05-01T20:16:36-07:00">May 1, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">If you’re like me and you have the radio app not working and your Apple Watch is saying: “Sign in to your Apple ID in General in the Apple Watch app on your ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/emre.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/so-you-lost-a-disk-on-a-md-raid5-array-now-what/" rel="permalink">So you lost a disk on a MD RAID5 array, now what?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-04-28T16:47:21-07:00">April 28, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">It happens, you just lost a disk on your RAID5 MD array, or things are not how it should look like… How do we troubleshoot this?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/emre.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/run-pihole-without-raspberry-pi/" rel="permalink">Run pihole without raspberry pi
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2019-11-16T10:38:02-08:00">November 16, 2019</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I have few 24/7 running linux boxes at home. I wanted to try pi-hole. But I really didn’t want to add another computer (raspberry pi) on my network.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/emre.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/security/shadowsocks-auto-deploy/" rel="permalink">shadowsocks auto deploy
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2018-04-06T09:37:58-07:00">April 6, 2018</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I wrote a cloud-init script to automate the deployment of a shadowsocks server. I shared it in a gist here.
+Features:
+
+Creates a non-privileged user
+
+Uploads...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/emresaglam" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/emresaglam" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Emre Sağlam. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

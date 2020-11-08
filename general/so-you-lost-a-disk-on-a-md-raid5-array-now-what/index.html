@@ -1,0 +1,786 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>So you lost a disk on a MD RAID5 array, now what? - eBlog</title>
+<meta name="description" content="It happens, you just lost a disk on your RAID5 MD array, or things are not how it should look like… How do we troubleshoot this?">
+
+
+  <meta name="author" content="Emre Sağlam">
+  
+  <meta property="article:author" content="Emre Sağlam">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="eBlog">
+<meta property="og:title" content="So you lost a disk on a MD RAID5 array, now what?">
+<meta property="og:url" content="http://localhost:4000/general/so-you-lost-a-disk-on-a-md-raid5-array-now-what/">
+
+
+  <meta property="og:description" content="It happens, you just lost a disk on your RAID5 MD array, or things are not how it should look like… How do we troubleshoot this?">
+
+
+
+
+
+  <meta name="twitter:site" content="@emresaglam">
+  <meta name="twitter:title" content="So you lost a disk on a MD RAID5 array, now what?">
+  <meta name="twitter:description" content="It happens, you just lost a disk on your RAID5 MD array, or things are not how it should look like… How do we troubleshoot this?">
+  <meta name="twitter:url" content="http://localhost:4000/general/so-you-lost-a-disk-on-a-md-raid5-array-now-what/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-04-28T16:47:21-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/general/so-you-lost-a-disk-on-a-md-raid5-array-now-what/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Emre Sağlam",
+      "url": "http://localhost:4000/",
+      "sameAs": ["https://twitter.com/emresaglam","https://linkedin.com/in/emresaglam"]
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="eBlog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/img/emre.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          eBlog
+          <span class="site-subtitle">v4.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/img/emre.png" alt="Emre Sağlam" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Emre Sağlam</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Some person</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">San Francisco Bay Area</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+            <li><a href="https://emresaglam.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/emresaglam" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/emresaglam" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="So you lost a disk on a MD RAID5 array, now what?">
+    <meta itemprop="description" content="It happens, you just lost a disk on your RAID5 MD array, or things are not how it should look like… How do we troubleshoot this?">
+    <meta itemprop="datePublished" content="2020-04-28T16:47:21-07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">So you lost a disk on a MD RAID5 array, now what?
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-04-28T16:47:21-07:00">April 28, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>It happens, you just lost a disk on your RAID5 MD array, or things are not how it should look like… How do we troubleshoot this?</p>
+
+<p>First things first, what’s the name of your MD device. You can easily learn that by issuing:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /proc/mdstat
+</code></pre></div></div>
+
+<p>This should output something similar to:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">Personalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10]
+md0 : active raid5 sdd[1] sda[3] sdb[2]
+2929890816 blocks super 1.2 level 5, 512k chunk, algorithm 2 [3/4] [.AAA]
+bitmap: 0/8 pages [0KB], 65536KB chunk
+</span></code></pre></div></div>
+
+<p>Here we have a MD device <code class="language-plaintext highlighter-rouge">/dev/md0</code>. (If you don’t see a response to this, you might have lost your MD device, which could be a bigger issue!)</p>
+
+<p>Another thing that we see (Or we don’t see) here is that sda/sdb/sdd are here in the raid but <code class="language-plaintext highlighter-rouge">sdc</code> is nowhere to be found! This is our problem.</p>
+
+<p>For some reason <code class="language-plaintext highlighter-rouge">/dev/sdc</code> is not in the RAID group anymore. Let’s see what’s going on with <code class="language-plaintext highlighter-rouge">/dev/sdc</code>?</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mdadm <span class="nt">--examine</span> /dev/sdc
+</code></pre></div></div>
+
+<p>In my example this was hanging for a long time. When I issue <code class="language-plaintext highlighter-rouge">dmesg</code> on another console, I was getting a lot of I/O errors about this disk. This is telling me that the disk is malfunctioning.</p>
+
+<p>I shutdown the server and wiggled the disk. Rebooted and it was back online. My array has now four disks however only 3 of them are “functioning” since after the reboot MD kicked <code class="language-plaintext highlighter-rouge">/dev/sdc</code> out of the array.</p>
+
+<p>We need to reassemble the array and let RAID5 do its magic. First stop the MD device <code class="language-plaintext highlighter-rouge">/dev/md0</code>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mdadm <span class="nt">--stop</span> /dev/md0
+</code></pre></div></div>
+
+<p>Then we need to add <code class="language-plaintext highlighter-rouge">/dev/sdc</code> back into the array:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mdadm /dev/md0 <span class="nt">-a</span> /dev/sdc
+</code></pre></div></div>
+
+<p>Then depending on the situation we might need to reassemble the array:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mdadm <span class="nt">--assemble</span> /dev/md0 /dev/sd[abcd] <span class="nt">--verbose</span> <span class="nt">--force</span>
+</code></pre></div></div>
+
+<p>Hopefully <code class="language-plaintext highlighter-rouge">/dev/sdc</code> is now back in your array now. This should start a long(er) process to sync up the array state to all disks and hopefully you now have your array back!</p>
+
+<p>After the sync completes, I would still do a fsck on the <code class="language-plaintext highlighter-rouge">/dev/md0</code> filesystem.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>fsck.ext4 /dev/md0
+e2fsck 1.45.5 <span class="o">(</span>07-Jan-2020<span class="o">)</span>
+data: recovering journal
+JBD2: Invalid checksum recovering block 185073680 <span class="k">in </span>log
+JBD2: Invalid checksum recovering block 89 <span class="k">in </span>log
+Journal checksum error found <span class="k">in </span>data
+data was not cleanly unmounted, check forced.
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+Free blocks count wrong <span class="o">(</span>704006059, <span class="nv">counted</span><span class="o">=</span>696320594<span class="o">)</span><span class="nb">.</span>
+Fix? <span class="nb">yes
+</span>Free inodes count wrong <span class="o">(</span>182701042, <span class="nv">counted</span><span class="o">=</span>182694547<span class="o">)</span><span class="nb">.</span>
+Fix? <span class="nb">yes
+ </span>data: FILE SYSTEM WAS MODIFIED
+data: 429421/183123968 files <span class="o">(</span>0.2% non-contiguous<span class="o">)</span>, 36152110/732472704 blocks
+</code></pre></div></div>
+
+<p>You can use this same steps (or similar) to remove /dev/sdc and replace with a brand new hard drive. In my case wiggling solved the problem for now. (I probably will need a drive in the near future)</p>
+
+<p>I hope this helped someone. It surely will help me when I will have to do this again 😛</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#linux" class="page__taxonomy-item" rel="tag">linux</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#tips" class="page__taxonomy-item" rel="tag">tips</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#general" class="page__taxonomy-item" rel="tag">General</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-04-28T16:47:21-07:00">April 28, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=emresaglam&text=So+you+lost+a+disk+on+a+MD+RAID5+array%2C+now%C2%A0what%3F%20http%3A%2F%2Flocalhost%3A4000%2Fgeneral%2Fso-you-lost-a-disk-on-a-md-raid5-array-now-what%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fgeneral%2Fso-you-lost-a-disk-on-a-md-raid5-array-now-what%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgeneral%2Fso-you-lost-a-disk-on-a-md-raid5-array-now-what%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/general/run-pihole-without-raspberry-pi/" class="pagination--pager" title="Run pihole without raspberry pi
+">Previous</a>
+    
+    
+      <a href="/general/apple-watch-radio/" class="pagination--pager" title="Apple watch radio
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/black-and-silver-car-gear-shift-lever-437036.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/apple-watch-radio/" rel="permalink">Apple watch radio
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-05-01T20:16:36-07:00">May 1, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">If you’re like me and you have the radio app not working and your Apple Watch is saying: “Sign in to your Apple ID in General in the Apple Watch app on your ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/emre.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/run-pihole-without-raspberry-pi/" rel="permalink">Run pihole without raspberry pi
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2019-11-16T10:38:02-08:00">November 16, 2019</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I have few 24/7 running linux boxes at home. I wanted to try pi-hole. But I really didn’t want to add another computer (raspberry pi) on my network.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/emre.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/security/shadowsocks-auto-deploy/" rel="permalink">shadowsocks auto deploy
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2018-04-06T09:37:58-07:00">April 6, 2018</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I wrote a cloud-init script to automate the deployment of a shadowsocks server. I shared it in a gist here.
+Features:
+
+Creates a non-privileged user
+
+Uploads...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/emre.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/air_quality_index_bot/" rel="permalink">Air Quality Index Bot
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2017-10-16T21:09:45-07:00">October 16, 2017</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">After the devastating Northern California wildfires, I found myself looking at AirNow multiple times a day. Also at work, like many Bay Area tech companies, ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/emresaglam" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/emresaglam" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Emre Sağlam. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
