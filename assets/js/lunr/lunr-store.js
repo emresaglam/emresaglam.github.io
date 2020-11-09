@@ -64,4 +64,10 @@ var store = [{
         "tags": ["apple","apple watch","tips","watch"],
         "url": "http://localhost:4000/general/apple-watch-radio/",
         "teaser": "http://localhost:4000/assets/img/black-and-silver-car-gear-shift-lever-437036.jpg"
+      },{
+        "title": "New Blog!",
+        "excerpt":"I decided to say good bye to Wordpress today. Let’s see if I will regret this decision in the long run. :) I tried to move my blog to jekyll, mainly because I don’t want to manage a server side software stack (Mainly PHP, Wordpress and MYSQL). I said I...","categories": ["general"],
+        "tags": ["blog","life"],
+        "url": "http://localhost:4000/general/new-blog/",
+        "teaser": "http://localhost:4000/assets/img/emre.png"
       }]
