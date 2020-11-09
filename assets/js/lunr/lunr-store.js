@@ -1,6 +1,6 @@
 var store = [{
         "title": "ý yerine ı görmek istiyor musunuz?",
-        "excerpt":"Türkçe karakterlerin sorunsalı olan ISO-8859-9 formatıyla UTF-8 arasındaki uyuşmazlığı çözen küçük bir python scripti yazdım. Program girdi olarak ISO-8859-9 formatlanmış bir yazı alıyor ve de UTF-8 ile formatlayıp dosyaya yazıyor. Kullanımı: [code language=\"bash\"] python convertToUnicode.py --input /path/to/filename.srt --output /path/to/convertedfilename.srt [/code] ya da [code language=\"bash\"] python convertToUnicode.py -i /path/to/filename.srt -o /path/to/convertedfilename.srt...","categories": ["General"],
+        "excerpt":"Türkçe karakterlerin sorunsalı olan ISO-8859-9 formatıyla UTF-8 arasındaki uyuşmazlığı çözen küçük bir python scripti yazdım. Program girdi olarak ISO-8859-9 formatlanmış bir yazı alıyor ve de UTF-8 ile formatlayıp dosyaya yazıyor. Kullanımı: python convertToUnicode.py --input /dizin/dizin/dosya.srt --output /dizin/dizin/yenidosya.srt ya da python convertToUnicode.py -i /dizin/dizin/dosya.srt -o /dizin/dizin/yenidosya.srt Siz de kullanmak istiyorsanız: https://github.com/emresaglam/convertToUnicode...","categories": ["General"],
         "tags": ["linux","python","tools","türkçe","turkish"],
         "url": "https://blog.emresaglam.com/general/y-yerine-i-gormek-istiyor-musunuz/",
         "teaser": "https://blog.emresaglam.com/assets/img/emre.png"
