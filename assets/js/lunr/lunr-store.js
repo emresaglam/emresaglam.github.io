@@ -65,6 +65,12 @@ var store = [{
         "url": "https://blog.emresaglam.com/general/apple-watch-radio/",
         "teaser": "https://blog.emresaglam.com/assets/img/black-and-silver-car-gear-shift-lever-437036.jpg"
       },{
+        "title": "New Blog!",
+        "excerpt":"I decided to say good bye to Wordpress today. Let’s see if I will regret this decision in the long run. :) I tried to move my blog to jekyll, mainly because I don’t want to manage a server side software stack (Mainly PHP, Wordpress and MYSQL). I said I...","categories": ["general"],
+        "tags": ["blog","life"],
+        "url": "https://blog.emresaglam.com/general/new-blog/",
+        "teaser": "https://blog.emresaglam.com/assets/img/emre.png"
+      },{
         "title": "GE Dishwasher parts nightmare!",
         "excerpt":"We have a GE dishwasher. Model number: PDWT380R10SS. It’s one of those that has “touch buttons” on the lid. This one was made in 2009. It’s in its glorious 11th year as I am writing this blog entry. According to Consumer Reportsthe average life of a dishwasher is 10 years....","categories": ["general"],
         "tags": ["blog","life"],
