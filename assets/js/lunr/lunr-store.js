@@ -65,8 +65,8 @@ var store = [{
         "url": "https://blog.emresaglam.com/general/apple-watch-radio/",
         "teaser": "https://blog.emresaglam.com/assets/img/black-and-silver-car-gear-shift-lever-437036.jpg"
       },{
-        "title": "New Blog!",
-        "excerpt":"GE Dishwasher parts nightmare! We have a GE dishwasher. Model number: PDWT380R10SS. It’s one of those that has “touch buttons” on the lid. This one was made in 2009. It’s in its glorious 11th year as I am writing this blog entry. According to Consumer Reportsthe average life of a...","categories": ["general"],
+        "title": "GE Dishwasher parts nightmare!",
+        "excerpt":"We have a GE dishwasher. Model number: PDWT380R10SS. It’s one of those that has “touch buttons” on the lid. This one was made in 2009. It’s in its glorious 11th year as I am writing this blog entry. According to Consumer Reportsthe average life of a dishwasher is 10 years....","categories": ["general"],
         "tags": ["blog","life"],
         "url": "https://blog.emresaglam.com/general/dishwasher-parts-nightmare/",
         "teaser": "https://blog.emresaglam.com/assets/img/emre.png"
