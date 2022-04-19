@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/emresaglam
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://emresaglam.com
+  * I am emresaglam (https://keybase.io/emresaglam) on keybase.
+  * I have a public key with fingerprint BF25 C594 9E5A EC3A 5E53  1714 C52C F4B2 A9C3 2E2E
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101f0470878ab388a36fc5de7e4249f9869507ea520e7117d256d981adc612506120a",
+            "fingerprint": "bf25c5949e5aec3a5e531714c52cf4b2a9c32e2e",
+            "host": "keybase.io",
+            "key_id": "c52cf4b2a9c32e2e",
+            "kid": "0101f0470878ab388a36fc5de7e4249f9869507ea520e7117d256d981adc612506120a",
+            "uid": "6934296570cce050b1fe6b997aa18419",
+            "username": "emresaglam"
+        },
+        "service": {
+            "hostname": "emresaglam.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1460231394,
+    "expire_in": 157680000,
+    "prev": "048ecae6032f777715042ad0a5a43083db753a6aea27d0f69c6b513b06f7e829",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtUltoE0EUTdNa22JEsFXEKrj4ITbG2dmdfcRarX74pCpaWgw1zu7eTbc22bgb
+U2uQqh9FEdQP8YVSa6kPFKG+UEEQ4lsQ6ltBRNRKVURQWwiKzhb90k/vxwz3zjln
+zr3cXYF8nz/vevDrmRPZUCjvbr/mqytuSGc4zTZauXCGWwNDFzQb4KaiayyDC3OI
+R7yJRBkpskI1QVGoIJk6MUAGEYuqqSqSSpAMlGAEMs/LBiaSoSo8NXSJxwSxA1Eu
+yJlWIgZO0rESKSarmZjoRBVVIBR0gRIgAi/zok6wbooapqouYMDAiI226zGYOY26
+ELJsVmNJdMjeP/D/2fe6ITlJFUSsSkRGug6III03QdJUVaaUV0Re9YAuOAkaB4aG
+uAMujTXTOLcxyLF62tLBG63Xy1+YkG7HGT/p2Clbt5vZW2MqlQx71FRr0sO2gBb9
+rRLVrITBRskIaXBcy05wYZ4h9ZTlyfKihLDAC6oY5GB90nIgankIIksKYuF9A2lv
+PqICEZ2ChARsyix4gkRMDUQJFQWkCIYmE4FKFCiWDWRKqi5phBc0JJkyKNjr2IW1
+CZsLC8wnjTFN14olaGqdA9zGkm155QW+PL+vcJjfWzJfSfGoP5uHS4b/GDfu9bQG
+t+Ln1c3GyO/LVy7ac8r6MH3m62c9YzJLXhbFbpa2dCyudA4f6fQPrngZaBt942v5
+1t6mh7nx/bkDufZc0enanU1nO9P71jYGql98rqx6cLGq783m2QPFkTnbj/WXGvSO
+dO1e9/b3BwIdFYXClupqOinXszy/rnbw9tarZerlrsiFz4uyJy+dGzFwuX7sW6dv
+4awv0aPdwxfEVy1Ih3pKIyUfm28taX+crWnvaj1+DwfKyrKhQ9PmLzsIXQ3Bmrb9
+zyecn50e3Zbf+7RqxuSTC/31G678eDKvqYCbtHfy6h0TfTXvMtKrR2OnvJu6qWJ3
+X+WjffXfsxfGZ+behftLv1V++gU=
+=esvL
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/emresaglam
+
+==================================================================
