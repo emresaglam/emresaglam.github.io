@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.emresaglam.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.emresaglam.com/" rel="alternate" type="text/html" /><updated>2022-11-11T13:50:45-08:00</updated><id>https://blog.emresaglam.com/feed.xml</id><title type="html">eBlog</title><subtitle>Emre's blog!</subtitle><author><name>Emre Sağlam</name></author><entry><title type="html">GE Dishwasher parts nightmare!</title><link href="https://blog.emresaglam.com/general/dishwasher-parts-nightmare/" rel="alternate" type="text/html" title="GE Dishwasher parts nightmare!" /><published>2020-11-14T00:00:00-08:00</published><updated>2020-11-14T00:00:00-08:00</updated><id>https://blog.emresaglam.com/general/dishwasher-parts-nightmare</id><content type="html" xml:base="https://blog.emresaglam.com/general/dishwasher-parts-nightmare/"><![CDATA[<p>We have a GE dishwasher. Model number: PDWT380R10SS. It’s one of those that has “touch buttons” on the lid.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.emresaglam.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.emresaglam.com/" rel="alternate" type="text/html" /><updated>2022-11-11T14:07:26-08:00</updated><id>https://blog.emresaglam.com/feed.xml</id><title type="html">eBlog</title><subtitle>Emre's blog!</subtitle><author><name>Emre Sağlam</name></author><entry><title type="html">How to change your auxiliary battery on your LR4</title><link href="https://blog.emresaglam.com/general/how-to-change-your-auxiliary-battery-on-your-lr4/" rel="alternate" type="text/html" title="How to change your auxiliary battery on your LR4" /><published>2020-12-06T00:00:00-08:00</published><updated>2020-12-06T00:00:00-08:00</updated><id>https://blog.emresaglam.com/general/how-to-change-your-auxiliary-battery-on-your-lr4</id><content type="html" xml:base="https://blog.emresaglam.com/general/how-to-change-your-auxiliary-battery-on-your-lr4/"><![CDATA[<p>I probably am one of the few who likes the ECO functionality on my LR4. You stop, the engine stops. Simple. Until it doesn’t…</p>
+
+<p>One thing we learned from the hybrid vehicles is that we can efficiently and automatically start stop gas engines using an auxiliary battery. With hybrid vehicles having a huge battery capacity, not a big deal… With normal gas engines with a tiny battery, well… things don’t go as well as the hybrid ones. :(</p>
+
+<p>Very first sign of a malfunctioning battery is the orange, crossed out ECO sign with a circular arrow on it. This means either your battery is running low, or already dead. If after long drives it disappears, it means it’s still charging. But trust me it’ll die soon.</p>
+
+<p>The battery is a “special battery” by Land Rover. From the size of it, it looks like a motorcycle battery. The part number is: CX23-10C655-AC or LR047630. Exide makes them. You can get a Jaguar/Land Rover branded one, or an Exide branded one. Up to you. As you can see I chose a branded one. I ordered mine online from <a href="https://www.centurylandroverhuntsville.com">Land Rover of Huntsville</a>. Super fast delivery. Kudos to them!</p>
+
+<p>Here is how to replace your battery.</p>
+
+<ul>
+  <li>Pop out your plastic engine cover. It’s the one on the driver side. (For driving on the right side of the road people) Pull the tab and it’ll pop right out. Check out the picture (before/after) Also remove that gray styrofoam cover. That’s where the battery is.</li>
+</ul>
+
+<table>
+	<tr>
+		<td><a href="/assets/img/IMG_0314.jpeg"><img src="/assets/img/IMG_0314.jpeg" /></a></td>
+		<td><a href="/assets/img/IMG_0315.jpeg"><img src="/assets/img/IMG_0315.jpeg" /></a></td>
+		<td><a href="/assets/img/IMG_0316.jpeg"><img src="/assets/img/IMG_0316.jpeg" /></a></td>
+	</tr>
+</table>
+
+<ul>
+  <li>
+    <p>Prepare your 10 mm socket and a long(ish) socket arm. The battery holder’s nut is pretty deep. This is where you probably need a magnetic socket. I didn’t have one, I survived :) Same socket opens the battery terminal nuts too. You don’t need to completely unscrew them. Just loosen them enough to pop the terminals. Don’t make the same mistake I did.</p>
+
+    <p>Also there is a black “pipe” with a red piece that connects to the battery (for acide fumes coming out of your battery). Don’t forget to disconnect (and reconnect) that too.</p>
+  </li>
+</ul>
+
+<table>
+	<tr>
+		<td><a href="/assets/img/IMG_0319.jpeg"><img src="/assets/img/IMG_0319.jpeg" /></a></td>
+		<td><a href="/assets/img/IMG_0320.jpeg"><img src="/assets/img/IMG_0320.jpeg" /></a></td>
+		<td><a href="/assets/img/IMG_0321.jpeg"><img src="/assets/img/IMG_0321.jpeg" /></a></td>
+	</tr>
+</table>
+
+<ul>
+  <li>
+    <p>My original battery was covered with a styrofoam-ish wrap. It’s connected to the battery with double sided tape. I gently removed it from the battery and rewrapped the new one with it. Probably another part that the dealer would have charged few hundreds to me :D</p>
+
+    <p>Below you can find the voltage differences between the old and the new battery and a picture of the properly mounted terminals.</p>
+
+    <p>The rest is to mount everything back in reverse! If you don’t have a magnetic socket I feel sorry for you. ;)</p>
+  </li>
+</ul>
+
+<table>
+        <tr>
+                <td><a href="/assets/img/IMG_0312.jpeg"><img src="/assets/img/IMG_0312.jpeg" /></a></td>
+                <td><a href="/assets/img/IMG_0322.jpeg"><img src="/assets/img/IMG_0322.jpeg" /></a></td>
+                <td><a href="/assets/img/IMG_0324.jpeg"><img src="/assets/img/IMG_0324.jpeg" /></a></td>
+        </tr>
+	<tr>
+                <td colspan="3"><a href="/assets/img/IMG_0323.jpeg"><img src="/assets/img/IMG_0323.jpeg" /></a></td>
+        </tr>
+</table>]]></content><author><name>Emre Sağlam</name></author><category term="general" /><category term="blog" /><category term="life" /><category term="howto" /><category term="fix" /><category term="tips" /><summary type="html"><![CDATA[I probably am one of the few who likes the ECO functionality on my LR4. You stop, the engine stops. Simple. Until it doesn’t…]]></summary></entry><entry><title type="html">GE Dishwasher parts nightmare!</title><link href="https://blog.emresaglam.com/general/dishwasher-parts-nightmare/" rel="alternate" type="text/html" title="GE Dishwasher parts nightmare!" /><published>2020-11-14T00:00:00-08:00</published><updated>2020-11-14T00:00:00-08:00</updated><id>https://blog.emresaglam.com/general/dishwasher-parts-nightmare</id><content type="html" xml:base="https://blog.emresaglam.com/general/dishwasher-parts-nightmare/"><![CDATA[<p>We have a GE dishwasher. Model number: PDWT380R10SS. It’s one of those that has “touch buttons” on the lid.</p>
 
 <p>This one was made in 2009. It’s in its glorious 11th year as I am writing this blog entry. According to <a href="https://www.consumerreports.org/dishwashers/how-to-make-your-dishwasher-last-longer/">Consumer Reports</a>the average life of a dishwasher is 10 years. I already changed the detergent pump of the dishwasher which was clogged because of our mistakes (probably another blog entry).</p>
 
@@ -185,14 +242,4 @@ listening on en1, link-type EN10MB <span class="o">(</span>Ethernet<span class="
 <p>I wanted to use Chirp for my <a href="http://www.yaesu.com/indexVS.cfm?cmd=DisplayProducts&amp;ProdCatID=249&amp;encProdID=227201D29C822AEFF8482F3367495319">Yaesu FTM-400XDR</a>. However it looks like Chirp doesn't support this model. So my initial reaction was to create the repeater list with Chirp, export on CSV, and import it to Yaesu.</p>
 <p>But, that wasn't possible either since Yaesu expects the data in a different order and format.</p>
 <p>I wrote a <a href="https://github.com/emresaglam/chirp2yaesu">small python script</a> that rearranges and reformats the CSV file to the expected import file for the <a href="http://www.yaesu.com/indexVS.cfm?cmd=DisplayProducts&amp;ProdCatID=249&amp;encProdID=227201D29C822AEFF8482F3367495319">Yaesu's own software</a>. Check out the <a href="https://github.com/emresaglam/chirp2yaesu/blob/master/README.md">README</a> to read how you can install and use the script.</p>
-<p>By the way, Yaesu's software to program the radio doesn't work on Mac OS X natively, since it's a Windows software. I managed to run it on Mac OS X using <a href="https://www.winehq.org/">wine</a>. But that's another blog entry...</p>]]></content><author><name>Emre Sağlam</name></author><category term="General" /><category term="ftm400" /><category term="ftm400xdr" /><category term="git" /><category term="github" /><category term="ham radio" /><category term="python" /><category term="tips" /><category term="tricks" /><category term="yaesu" /><summary type="html"><![CDATA[I use Chirp. I love it. It's the only way to program my Baofeng UV-R(+) radios... Period. Also I love that I can download repeater settings according to a zip code, county, state, etc... I wanted to use Chirp for my Yaesu FTM-400XDR. However it looks like Chirp doesn't support this model. So my initial reaction was to create the repeater list with Chirp, export on CSV, and import it to Yaesu. But, that wasn't possible either since Yaesu expects the data in a different order and format. I wrote a small python script that rearranges and reformats the CSV file to the expected import file for the Yaesu's own software. Check out the README to read how you can install and use the script. By the way, Yaesu's software to program the radio doesn't work on Mac OS X natively, since it's a Windows software. I managed to run it on Mac OS X using wine. But that's another blog entry...]]></summary></entry><entry><title type="html">No timer in Mac OS X? No problem!</title><link href="https://blog.emresaglam.com/general/no-timer-in-mac-os-x-no-problem/" rel="alternate" type="text/html" title="No timer in Mac OS X? No problem!" /><published>2016-10-11T20:20:46-07:00</published><updated>2016-10-11T20:20:46-07:00</updated><id>https://blog.emresaglam.com/general/no-timer-in-mac-os-x-no-problem</id><content type="html" xml:base="https://blog.emresaglam.com/general/no-timer-in-mac-os-x-no-problem/"><![CDATA[<p>Mac OS X doesn't come with a timer installed by default. There are bunch of timers in the App Store, you can definitely install one of those.</p>
-<p>But here is how to make one from scratch. Open terminal screen and type:</p>
-<p><code>sleep 5 ; say "Time is up"</code></p>
-<p>Well that's it :) This command will sleep for 5 seconds and say "Time is up" at the end of 5 seconds.</p>
-<p>We can make a little script out of it and save as /usr/local/bin/timer as below:</p>
-<p><code>#!/bin/bash<br />
-sleep $1 ; say "Time is up"</code></p>
-<p>You can invoke the command like this, it will sleep 5 seconds and tell you "Time is up":</p>
-<p><code>timer 5</code></p>
-<p>As a bonus, if you want minutes instead of seconds, you can always do something like this which will run the timer for 5 minutes:</p>
-<p><code>timer `echo "5*60" | bc`</code></p>]]></content><author><name>Emre Sağlam</name></author><category term="General" /><category term="command line" /><category term="mac" /><category term="mac OS X" /><category term="terminal" /><category term="tips" /><summary type="html"><![CDATA[Mac OS X doesn't come with a timer installed by default. There are bunch of timers in the App Store, you can definitely install one of those. But here is how to make one from scratch. Open terminal screen and type: sleep 5 ; say "Time is up" Well that's it :) This command will sleep for 5 seconds and say "Time is up" at the end of 5 seconds. We can make a little script out of it and save as /usr/local/bin/timer as below: #!/bin/bash sleep $1 ; say "Time is up" You can invoke the command like this, it will sleep 5 seconds and tell you "Time is up": timer 5 As a bonus, if you want minutes instead of seconds, you can always do something like this which will run the timer for 5 minutes: timer `echo "5*60" | bc`]]></summary></entry></feed>
+<p>By the way, Yaesu's software to program the radio doesn't work on Mac OS X natively, since it's a Windows software. I managed to run it on Mac OS X using <a href="https://www.winehq.org/">wine</a>. But that's another blog entry...</p>]]></content><author><name>Emre Sağlam</name></author><category term="General" /><category term="ftm400" /><category term="ftm400xdr" /><category term="git" /><category term="github" /><category term="ham radio" /><category term="python" /><category term="tips" /><category term="tricks" /><category term="yaesu" /><summary type="html"><![CDATA[I use Chirp. I love it. It's the only way to program my Baofeng UV-R(+) radios... Period. Also I love that I can download repeater settings according to a zip code, county, state, etc... I wanted to use Chirp for my Yaesu FTM-400XDR. However it looks like Chirp doesn't support this model. So my initial reaction was to create the repeater list with Chirp, export on CSV, and import it to Yaesu. But, that wasn't possible either since Yaesu expects the data in a different order and format. I wrote a small python script that rearranges and reformats the CSV file to the expected import file for the Yaesu's own software. Check out the README to read how you can install and use the script. By the way, Yaesu's software to program the radio doesn't work on Mac OS X natively, since it's a Windows software. I managed to run it on Mac OS X using wine. But that's another blog entry...]]></summary></entry></feed>

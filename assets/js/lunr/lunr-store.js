@@ -76,4 +76,10 @@ var store = [{
         "tags": ["blog","life"],
         "url": "https://blog.emresaglam.com/general/dishwasher-parts-nightmare/",
         "teaser": "https://blog.emresaglam.com/assets/img/emre.png"
+      },{
+        "title": "How to change your auxiliary battery on your LR4",
+        "excerpt":"I probably am one of the few who likes the ECO functionality on my LR4. You stop, the engine stops. Simple. Until it doesn’t… One thing we learned from the hybrid vehicles is that we can efficiently and automatically start stop gas engines using an auxiliary battery. With hybrid vehicles...","categories": ["general"],
+        "tags": ["blog","life","howto","fix","tips"],
+        "url": "https://blog.emresaglam.com/general/how-to-change-your-auxiliary-battery-on-your-lr4/",
+        "teaser": "https://blog.emresaglam.com/assets/img/emre.png"
       }]
