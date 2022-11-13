@@ -82,4 +82,10 @@ var store = [{
         "tags": ["blog","life","howto","fix","tips"],
         "url": "https://blog.emresaglam.com/general/how-to-change-your-auxiliary-battery-on-your-lr4/",
         "teaser": "https://blog.emresaglam.com/assets/img/emre.png"
+      },{
+        "title": "Mastodon migration",
+        "excerpt":"I did a thing today and I opened a Mastodon account. I was never very active on Twitter, I will probably not be very active on Mastodon, but here is to support open standards! :) I’m interested in the decentralized way of Mastodon’s inner workings. Having a “local instance” is...","categories": ["general"],
+        "tags": ["social media","life"],
+        "url": "https://blog.emresaglam.com/general/mastodon-migration/",
+        "teaser": "https://blog.emresaglam.com/assets/img/emre.png"
       }]
