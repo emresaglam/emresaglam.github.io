@@ -88,4 +88,10 @@ var store = [{
         "tags": ["social media","life"],
         "url": "https://blog.emresaglam.com/general/mastodon-migration/",
         "teaser": "https://blog.emresaglam.com/assets/img/emre.png"
+      },{
+        "title": "How to setup YSF2DMR on pi-star",
+        "excerpt":"In this blog entry I will talk about setting up YSF2DMR on pi-star (on a generic MMDVM device). I’ll try to be brief and not too detailed. Getting a DMR ID Go here and get a DMR ID. Go here and get a Brandmeister login. Go here and follow to...","categories": ["general"],
+        "tags": ["ham radio","yaesu","dmr","pi-star"],
+        "url": "https://blog.emresaglam.com/general/ysf2dmr-setup/",
+        "teaser": "https://blog.emresaglam.com/assets/img/emre.png"
       }]

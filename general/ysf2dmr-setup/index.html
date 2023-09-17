@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>How to change your auxiliary battery on your LR4 - eBlog</title>
-<meta name="description" content="I probably am one of the few who likes the ECO functionality on my LR4. You stop, the engine stops. Simple. Until it doesn’t…">
+<!-- begin _includes/seo.html --><title>How to setup YSF2DMR on pi-star - eBlog</title>
+<meta name="description" content="In this blog entry I will talk about setting up YSF2DMR on pi-star (on a generic MMDVM device). I’ll try to be brief and not too detailed.">
 
 
   <meta name="author" content="Emre Sağlam">
@@ -22,20 +22,20 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="eBlog">
-<meta property="og:title" content="How to change your auxiliary battery on your LR4">
-<meta property="og:url" content="https://blog.emresaglam.com/general/how-to-change-your-auxiliary-battery-on-your-lr4/">
+<meta property="og:title" content="How to setup YSF2DMR on pi-star">
+<meta property="og:url" content="https://blog.emresaglam.com/general/ysf2dmr-setup/">
 
 
-  <meta property="og:description" content="I probably am one of the few who likes the ECO functionality on my LR4. You stop, the engine stops. Simple. Until it doesn’t…">
+  <meta property="og:description" content="In this blog entry I will talk about setting up YSF2DMR on pi-star (on a generic MMDVM device). I’ll try to be brief and not too detailed.">
 
 
 
 
 
   <meta name="twitter:site" content="@emresaglam">
-  <meta name="twitter:title" content="How to change your auxiliary battery on your LR4">
-  <meta name="twitter:description" content="I probably am one of the few who likes the ECO functionality on my LR4. You stop, the engine stops. Simple. Until it doesn’t…">
-  <meta name="twitter:url" content="https://blog.emresaglam.com/general/how-to-change-your-auxiliary-battery-on-your-lr4/">
+  <meta name="twitter:title" content="How to setup YSF2DMR on pi-star">
+  <meta name="twitter:description" content="In this blog entry I will talk about setting up YSF2DMR on pi-star (on a generic MMDVM device). I’ll try to be brief and not too detailed.">
+  <meta name="twitter:url" content="https://blog.emresaglam.com/general/ysf2dmr-setup/">
 
   
     <meta name="twitter:card" content="summary">
@@ -46,7 +46,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-12-06T00:00:00-08:00">
+  <meta property="article:published_time" content="2023-09-17T00:00:00-07:00">
 
 
 
@@ -57,7 +57,7 @@
   
 
 
-<link rel="canonical" href="https://blog.emresaglam.com/general/how-to-change-your-auxiliary-battery-on-your-lr4/">
+<link rel="canonical" href="https://blog.emresaglam.com/general/ysf2dmr-setup/">
 
 
 
@@ -304,15 +304,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="How to change your auxiliary battery on your LR4">
-    <meta itemprop="description" content="I probably am one of the few who likes the ECO functionality on my LR4. You stop, the engine stops. Simple. Until it doesn’t…">
-    <meta itemprop="datePublished" content="2020-12-06T00:00:00-08:00">
+    <meta itemprop="headline" content="How to setup YSF2DMR on pi-star">
+    <meta itemprop="description" content="In this blog entry I will talk about setting up YSF2DMR on pi-star (on a generic MMDVM device). I’ll try to be brief and not too detailed.">
+    <meta itemprop="datePublished" content="2023-09-17T00:00:00-07:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">How to change your auxiliary battery on your LR4
+          <h1 id="page-title" class="page__title" itemprop="headline">How to setup YSF2DMR on pi-star
 </h1>
           
 
@@ -321,7 +321,7 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2020-12-06T00:00:00-08:00">December 6, 2020</time>
+        <time datetime="2023-09-17T00:00:00-07:00">September 17, 2023</time>
       </span>
     
 
@@ -334,7 +334,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          less than 1 minute read
         
       </span>
     
@@ -346,64 +346,21 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>I probably am one of the few who likes the ECO functionality on my LR4. You stop, the engine stops. Simple. Until it doesn’t…</p>
+        <p>In this blog entry I will talk about setting up YSF2DMR on pi-star (on a generic MMDVM device). I’ll try to be brief and not too detailed.</p>
 
-<p>One thing we learned from the hybrid vehicles is that we can efficiently and automatically start stop gas engines using an auxiliary battery. With hybrid vehicles having a huge battery capacity, not a big deal… With normal gas engines with a tiny battery, well… things don’t go as well as the hybrid ones. :(</p>
+<h1 id="getting-a-dmr-id">Getting a DMR ID</h1>
+<p>Go <a href="https://www.radioid.net/register">here</a> and get a DMR ID.
+Go <a href="https://brandmeister.network/?page=register">here</a> and get a Brandmeister login.
+Go <a href="https://help.brandmeister.us/dashboard/hotspot-security">here</a> and follow to instructions to get a Hotspot Security Password.</p>
 
-<p>Very first sign of a malfunctioning battery is the orange, crossed out ECO sign with a circular arrow on it. This means either your battery is running low, or already dead. If after long drives it disappears, it means it’s still charging. But trust me it’ll die soon.</p>
+<h1 id="setting-up-pi-star">Setting up Pi-Star</h1>
+<p>I will not talk about how to install pi-star, there are many good tutorials on the web. Always get the latest version of the pi-star software.</p>
 
-<p>The battery is a “special battery” by Land Rover. From the size of it, it looks like a motorcycle battery. The part number is: CX23-10C655-AC or LR047630. Exide makes them. You can get a Jaguar/Land Rover branded one, or an Exide branded one. Up to you. As you can see I chose a branded one. I ordered mine online from <a href="https://www.centurylandroverhuntsville.com">Land Rover of Huntsville</a>. Super fast delivery. Kudos to them!</p>
-
-<p>Here is how to replace your battery.</p>
-
-<ul>
-  <li>Pop out your plastic engine cover. It’s the one on the driver side. (For driving on the right side of the road people) Pull the tab and it’ll pop right out. Check out the picture (before/after) Also remove that gray styrofoam cover. That’s where the battery is.</li>
-</ul>
-
-<table>
-	<tr>
-		<td><a href="/assets/img/IMG_0314.jpeg"><img src="/assets/img/IMG_0314.jpeg" /></a></td>
-		<td><a href="/assets/img/IMG_0315.jpeg"><img src="/assets/img/IMG_0315.jpeg" /></a></td>
-		<td><a href="/assets/img/IMG_0316.jpeg"><img src="/assets/img/IMG_0316.jpeg" /></a></td>
-	</tr>
-</table>
-
-<ul>
-  <li>
-    <p>Prepare your 10 mm socket and a long(ish) socket arm. The battery holder’s nut is pretty deep. This is where you probably need a magnetic socket. I didn’t have one, I survived :) Same socket opens the battery terminal nuts too. You don’t need to completely unscrew them. Just loosen them enough to pop the terminals. Don’t make the same mistake I did.</p>
-
-    <p>Also there is a black “pipe” with a red piece that connects to the battery (for acide fumes coming out of your battery). Don’t forget to disconnect (and reconnect) that too.</p>
-  </li>
-</ul>
-
-<table>
-	<tr>
-		<td><a href="/assets/img/IMG_0319.jpeg"><img src="/assets/img/IMG_0319.jpeg" /></a></td>
-		<td><a href="/assets/img/IMG_0320.jpeg"><img src="/assets/img/IMG_0320.jpeg" /></a></td>
-		<td><a href="/assets/img/IMG_0321.jpeg"><img src="/assets/img/IMG_0321.jpeg" /></a></td>
-	</tr>
-</table>
-
-<ul>
-  <li>
-    <p>My original battery was covered with a styrofoam-ish wrap. It’s connected to the battery with double sided tape. I gently removed it from the battery and rewrapped the new one with it. Probably another part that the dealer would have charged few hundreds to me :D</p>
-
-    <p>Below you can find the voltage differences between the old and the new battery and a picture of the properly mounted terminals.</p>
-
-    <p>The rest is to mount everything back in reverse! If you don’t have a magnetic socket I feel sorry for you. ;)</p>
-  </li>
-</ul>
-
-<table>
-        <tr>
-                <td><a href="/assets/img/IMG_0312.jpeg"><img src="/assets/img/IMG_0312.jpeg" /></a></td>
-                <td><a href="/assets/img/IMG_0322.jpeg"><img src="/assets/img/IMG_0322.jpeg" /></a></td>
-                <td><a href="/assets/img/IMG_0324.jpeg"><img src="/assets/img/IMG_0324.jpeg" /></a></td>
-        </tr>
-	<tr>
-                <td colspan="3"><a href="/assets/img/IMG_0323.jpeg"><img src="/assets/img/IMG_0323.jpeg" /></a></td>
-        </tr>
-</table>
+<p>Go to pi-star Configuration page.</p>
+<ol>
+  <li>Toggle YSF Mode on</li>
+  <li>Toggle YSF2DMR on</li>
+</ol>
 
 
         
@@ -425,23 +382,19 @@
     
       
       
-      <a href="/tags/#blog" class="page__taxonomy-item" rel="tag">blog</a><span class="sep">, </span>
+      <a href="/tags/#dmr" class="page__taxonomy-item" rel="tag">dmr</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#fix" class="page__taxonomy-item" rel="tag">fix</a><span class="sep">, </span>
+      <a href="/tags/#ham-radio" class="page__taxonomy-item" rel="tag">ham radio</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#howto" class="page__taxonomy-item" rel="tag">howto</a><span class="sep">, </span>
+      <a href="/tags/#pi-star" class="page__taxonomy-item" rel="tag">pi-star</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#life" class="page__taxonomy-item" rel="tag">life</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/tags/#tips" class="page__taxonomy-item" rel="tag">tips</a>
+      <a href="/tags/#yaesu" class="page__taxonomy-item" rel="tag">yaesu</a>
     
     </span>
   </p>
@@ -469,7 +422,7 @@
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-12-06T00:00:00-08:00">December 6, 2020</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-09-17T00:00:00-07:00">September 17, 2023</time></p>
 
 
       </footer>
@@ -479,23 +432,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?via=emresaglam&text=How+to+change+your+auxiliary+battery+on+your+LR4%20https%3A%2F%2Fblog.emresaglam.com%2Fgeneral%2Fhow-to-change-your-auxiliary-battery-on-your-lr4%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?via=emresaglam&text=How+to+setup+YSF2DMR+on+pi-star%20https%3A%2F%2Fblog.emresaglam.com%2Fgeneral%2Fysf2dmr-setup%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.emresaglam.com%2Fgeneral%2Fhow-to-change-your-auxiliary-battery-on-your-lr4%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.emresaglam.com%2Fgeneral%2Fysf2dmr-setup%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fblog.emresaglam.com%2Fgeneral%2Fhow-to-change-your-auxiliary-battery-on-your-lr4%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fblog.emresaglam.com%2Fgeneral%2Fysf2dmr-setup%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/general/dishwasher-parts-nightmare/" class="pagination--pager" title="GE Dishwasher parts nightmare!
+      <a href="/general/mastodon-migration/" class="pagination--pager" title="Mastodon migration
 ">Previous</a>
     
     
-      <a href="/general/mastodon-migration/" class="pagination--pager" title="Mastodon migration
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -509,56 +461,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/img/emre.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/general/ysf2dmr-setup/" rel="permalink">How to setup YSF2DMR on pi-star
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2023-09-17T00:00:00-07:00">September 17, 2023</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">In this blog entry I will talk about setting up YSF2DMR on pi-star (on a generic MMDVM device). I’ll try to be brief and not too detailed.
-</p>
-  </article>
-</div>
-
         
           
 
@@ -605,6 +507,56 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">I did a thing today and I opened a Mastodon account. I was never very active on Twitter, I will probably not be very active on Mastodon, but here is to suppo...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/emre.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/how-to-change-your-auxiliary-battery-on-your-lr4/" rel="permalink">How to change your auxiliary battery on your LR4
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-12-06T00:00:00-08:00">December 6, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I probably am one of the few who likes the ECO functionality on my LR4. You stop, the engine stops. Simple. Until it doesn’t…
+</p>
   </article>
 </div>
 
