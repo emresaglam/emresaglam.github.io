@@ -334,7 +334,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          2 minute read
         
       </span>
     
@@ -360,7 +360,46 @@ Go <a href="https://help.brandmeister.us/dashboard/hotspot-security">here</a> an
 <ol>
   <li>Toggle YSF Mode on</li>
   <li>Toggle YSF2DMR on</li>
+  <li>Click on Apply Changes button. Wait for pi-star to apply the configuration.
+  &lt;img src=/assets/ysf.png&gt;
+  </li>
+  <li>In the General Configuration section make sure that CCS7/DMR ID is populated with your Radio ID that you got after registering with Radio ID (Link Above).</li>
+  <li>*Yaesu Configuration*</li> 
+ <li>Under Yaesu System Fusion Configuration section:</li>
+ <li>I usually leave the YSF Startup Host blank. But it really doesn't matter. If you will use it JUST for YSF2DMR, then maybe you might want to leave it connected to: YSF00002 That's the default YSF2DMR channel.</li>
+ <li>Toggle UPPERCASE Hostfiles on</li>
+ <li>Toggle WiresX Passthrough on (This one actually enables code not to be interpreted by the WiresX node, we will need this to be able to switch to a Talk Group on the fly)</li>
+ <li>(YSF2DMR)CCS7/DMR ID field choose as 01</li>
+ <li>DMR Master: Choose one server that is near you. I use BM 3103 as it's close to me. That's a Brandmeister server in the USA.</li>
+ <li>Hotspot Security: Enter here the password that you created with Brandmeister as Hotspot Security. (Link Above)</li>
+ <li>DMR TG: This is the ID for the Initial Talk Group that you want to connect. I usually leave this 00091. Talk Group for World Wide.</li>
+ <li>Here apply the changes and you should be good to go.</li>
 </ol>
+
+<h1 id="setting-up-the-radio">Setting up the radio</h1>
+<p>I’ll be talking about setting in Yaesu FT3D, but it is similar for most.</p>
+
+<ol>
+<li>Dial the radio to the frequency that you set up under General Configuration -&gt; Radio Frequency.</li>
+<li>Press the X button (WiresX button).</li>
+<li>Once you connect the MMDVM, press Search &amp; Direct button.</li>
+<li>Then press the Search &amp; Direct button again (on the second screen)</li>
+<li>You will see an ID button on the top left. Press that. This will change the input to 5 digits only.</li>
+<li>Type the number: 00002 and press ENT. This will connect the MMDVM to YSF00002 room. This room is the YSF2DMR room.</li>
+<li>Then press Search &amp; Direct two times in two different screens again.</li>
+<li>And press ID again.</li>
+<li>From this point on you can only change Talk Group IDs. You will be in YSF2DMR (YSF00002) room but will be able to switch DMR Talk groups by entering their IDs.</li>
+<li>Try your first group something like 00091 (This is TG91 World-Wide DMR channel)</li>
+<li>Congrats! :)</li>
+</ol>
+
+<h1 id="some-tips">Some tips</h1>
+<ol>
+<li> Sometimes you need to do a quick press to the talk button, I really don't know why... </li>
+<li> You can press and hold BAND button to leave the WiresX or YSF group.</li>
+</ol>
+
+<p>I’ll update this entry if I see things changing. 73!</p>
 
 
         
