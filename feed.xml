@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.emresaglam.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.emresaglam.com/" rel="alternate" type="text/html" /><updated>2023-09-17T17:29:41-07:00</updated><id>https://blog.emresaglam.com/feed.xml</id><title type="html">eBlog</title><subtitle>Emre's blog!</subtitle><author><name>Emre Sağlam</name></author><entry><title type="html">How to setup YSF2DMR on pi-star</title><link href="https://blog.emresaglam.com/general/ysf2dmr-setup/" rel="alternate" type="text/html" title="How to setup YSF2DMR on pi-star" /><published>2023-09-17T00:00:00-07:00</published><updated>2023-09-17T00:00:00-07:00</updated><id>https://blog.emresaglam.com/general/ysf2dmr-setup</id><content type="html" xml:base="https://blog.emresaglam.com/general/ysf2dmr-setup/"><![CDATA[<p>In this blog entry I will talk about setting up YSF2DMR on pi-star (on a generic MMDVM device). I’ll try to be brief and not too detailed.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.emresaglam.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.emresaglam.com/" rel="alternate" type="text/html" /><updated>2023-09-17T17:32:58-07:00</updated><id>https://blog.emresaglam.com/feed.xml</id><title type="html">eBlog</title><subtitle>Emre's blog!</subtitle><author><name>Emre Sağlam</name></author><entry><title type="html">How to setup YSF2DMR on pi-star</title><link href="https://blog.emresaglam.com/general/ysf2dmr-setup/" rel="alternate" type="text/html" title="How to setup YSF2DMR on pi-star" /><published>2023-09-17T00:00:00-07:00</published><updated>2023-09-17T00:00:00-07:00</updated><id>https://blog.emresaglam.com/general/ysf2dmr-setup</id><content type="html" xml:base="https://blog.emresaglam.com/general/ysf2dmr-setup/"><![CDATA[<p>In this blog entry I will talk about setting up YSF2DMR on pi-star (on a generic MMDVM device). I’ll try to be brief and not too detailed.</p>
 
 <h1 id="getting-a-dmr-id">Getting a DMR ID</h1>
 
@@ -15,10 +15,15 @@
 <ol>
   <li>Toggle YSF Mode on</li>
   <li>Toggle YSF2DMR on</li>
-  <li>Click on Apply Changes button. Wait for pi-star to apply the configuration.
-<img src="/assets/ysf.png" alt="apply changes" /></li>
-  <li>In the General Configuration section make sure that CCS7/DMR ID is populated with your Radio ID that you got after registering with Radio ID (Link Above).
-  <em>Yaesu Configuration</em></li>
+  <li>Click on Apply Changes button. Wait for pi-star to apply the configuration.</li>
+  <li>In the General Configuration section make sure that CCS7/DMR ID is populated with your Radio ID that you got after registering with Radio ID (Link Above).</li>
+</ol>
+
+<p><img src="/assets/ysf.png" alt="apply changes" /></p>
+
+<h2 id="yaesu-section-configuration">Yaesu Section Configuration</h2>
+
+<ol>
   <li>Under Yaesu System Fusion Configuration section:</li>
   <li>I usually leave the YSF Startup Host blank. But it really doesn’t matter. If you will use it JUST for YSF2DMR, then maybe you might want to leave it connected to: YSF00002 That’s the default YSF2DMR channel.</li>
   <li>Toggle UPPERCASE Hostfiles on</li>
