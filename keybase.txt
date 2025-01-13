@@ -4,7 +4,7 @@ https://keybase.io/emresaglam
 
 I hereby claim:
 
-  * I am an admin of http://emresaglam.com
+  * I am an admin of https://emresaglam.com
   * I am emresaglam (https://keybase.io/emresaglam) on keybase.
   * I have a public key with fingerprint BF25 C594 9E5A EC3A 5E53  1714 C52C F4B2 A9C3 2E2E
 
