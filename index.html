@@ -1,11 +1,12 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+
+<html lang="en-US" class="no-js">
   <head>
     <meta charset="utf-8">
 
@@ -57,20 +58,11 @@
 
 
 
-  <link rel="next" href="https://blog.emresaglam.com/page2/">
+  <link rel="next" href="https://blog.emresaglam.com/page/2/">
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": "Emre Sağlam",
-      "url": "https://blog.emresaglam.com/",
-      "sameAs": ["https://twitter.com/emresaglam","https://linkedin.com/in/emresaglam"]
-    
-  }
-</script>
+
+
 
 
 
@@ -80,33 +72,19 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="eBlog Feed">
 
-<!-- https://t.co/dKP3o1e -->
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="eBlog Feed">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
-
-<!--[if IE]>
-  <style>
-    /* old IE unsupported flexbox fixes */
-    .greedy-nav .site-title {
-      padding-right: 3em;
-    }
-    .greedy-nav button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-    }
-  </style>
-<![endif]-->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
 
@@ -118,19 +96,14 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--home" dir="ltr">
     <nav class="skip-links">
-  <h2 class="screen-reader-text">Skip links</h2>
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
     <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
   </ul>
 </nav>
-
-    <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-<![endif]-->
 
     
 
@@ -144,14 +117,16 @@
           <span class="site-subtitle">v4.0</span>
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/about/">About</a>
+              <a
+                href="/about/"
+                
+                
+              >About</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
-          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
-            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
-          </svg>
+          <i class="fas fa-search"></i>
         </button>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -176,22 +151,22 @@
   
 
 
-<div itemscope itemtype="https://schema.org/Person">
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
     <div class="author__avatar">
-      
-        <img src="/assets/img/emre.png" alt="Emre Sağlam" itemprop="image">
-      
+      <a href="https://blog.emresaglam.com/">
+        <img src="/assets/img/emre.png" alt="Emre Sağlam" itemprop="image" class="u-photo">
+      </a>
     </div>
   
 
   <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://blog.emresaglam.com/" itemprop="url">Emre Sağlam</a>
+    </h3>
     
-      <h3 class="author__name" itemprop="name">Emre Sağlam</h3>
-    
-    
-      <div class="author__bio" itemprop="description">
+      <div class="author__bio p-note" itemprop="description">
         <p>Some person</p>
 
       </div>
@@ -203,34 +178,34 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">San Francisco Bay Area</span>
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">San Francisco Bay Area</span>
         </li>
       
 
       
         
           
-            <li><a href="https://archive.emresaglam.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-archive" aria-hidden="true"></i><span class="label">Old Blog Posts</span></a></li>
+            <li><a href="https://archive.emresaglam.com" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-archive" aria-hidden="true"></i><span class="label">Old Blog Posts</span></a></li>
           
         
           
         
           
-            <li><a href="https://emresaglam.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+            <li><a href="https://emresaglam.com" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
           
         
           
-            <li><a href="https://infosec.exchange/@emresaglam" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span></a></li>
+            <li><a href="https://infosec.exchange/@emresaglam" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span></a></li>
           
         
           
-            <li><a href="https://twitter.com/emresaglam" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+            <li><a href="https://twitter.com/emresaglam" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
           
         
           
         
           
-            <li><a href="https://github.com/emresaglam" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+            <li><a href="https://github.com/emresaglam" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
           
         
           
@@ -287,7 +262,7 @@
 
       <!--
   <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
       <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
     </a>
   </li>
@@ -303,7 +278,7 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title"></h1>
+      <h1 id="page-title" class="page__title">eBlog</h1>
     
     Welcome to Emre Sağlam's blog! :) 
 
@@ -317,7 +292,10 @@
 
 <div class="entries-list">
   
-    
+
+
+
+
 
 
 
@@ -326,7 +304,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/general/ysf2dmr-setup/" rel="permalink">How to setup YSF2DMR on pi-star
+        <a href="/general/y-yerine-i-gormek-istiyor-musunuz/" rel="permalink">ý yerine ı görmek istiyor musunuz?
 </a>
       
     </h2>
@@ -337,7 +315,231 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2023-09-17T00:00:00-07:00">September 17, 2023</time>
+        
+        <time datetime="2016-09-16T20:23:34-07:00">September 16, 2016</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Türkçe karakterlerin sorunsalı olan ISO-8859-9 formatıyla UTF-8 arasındaki uyuşmazlığı çözen küçük bir python scripti yazdım. Program girdi olarak ISO-8859-9...</p>
+  </article>
+</div>
+
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/replacing-unity-with-xfce-in-ubuntu/" rel="permalink">Replacing Unity with XFCE in Ubuntu
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2016-09-29T10:56:15-07:00">September 29, 2016</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Here is what I do as soon as I install a new Ubuntu instance: I remove unity desktop and replace it with XFCE. And if you want to do the same it's pretty str...</p>
+  </article>
+</div>
+
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/bloomsky-weather-data-in-pymultimonaprs/" rel="permalink">Bloomsky weather data in pymultimonaprs
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2016-10-08T11:44:59-07:00">October 8, 2016</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I wrote a small python script to get the BloomSky weather data and "air" it on APRS using pymultimonaprs.
+You can find it in my github repo. Read the README....</p>
+  </article>
+</div>
+
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/no-timer-in-mac-os-x-no-problem/" rel="permalink">No timer in Mac OS X? No problem!
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2016-10-11T20:20:46-07:00">October 11, 2016</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Mac OS X doesn't come with a timer installed by default. There are bunch of timers in the App Store, you can definitely install one of those.
+But here is how...</p>
+  </article>
+</div>
+
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/yaesu-ftm-400xdr-and-chirp/" rel="permalink">Yaesu FTM-400XDR and Chirp
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2016-12-18T14:10:02-08:00">December 18, 2016</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I use Chirp. I love it. It's the only way to program my Baofeng UV-R(+) radios... Period.
+Also I love that I can download repeater settings according to a zi...</p>
+  </article>
+</div>
+
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/icloud-photos-meraki-and-traffic-shaping/" rel="permalink">iCloud Photos, Meraki and Traffic Shaping
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2017-09-25T19:25:42-07:00">September 25, 2017</time>
       </span>
     
 
@@ -357,13 +559,10 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">In this blog entry I will talk about setting up YSF2DMR on pi-star (on a generic MMDVM device). I’ll try to be brief and not too detailed.
-</p>
+    <p class="archive__item-excerpt" itemprop="description">I turned iCloud Photo Library on this week. We have close to 250 GB of photos, videos in several different computers and mobile devices. You might have guess...</p>
   </article>
 </div>
 
-  
-    
 
 
 
@@ -372,7 +571,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/general/mastodon-migration/" rel="permalink">Mastodon migration
+        <a href="/general/air_quality_index_bot/" rel="permalink">Air Quality Index Bot
 </a>
       
     </h2>
@@ -383,7 +582,8 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2022-10-12T00:00:00-07:00">October 12, 2022</time>
+        
+        <time datetime="2017-10-16T21:09:45-07:00">October 16, 2017</time>
       </span>
     
 
@@ -403,287 +603,10 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">I did a thing today and I opened a Mastodon account. I was never very active on Twitter, I will probably not be very active on Mastodon, but here is to suppo...</p>
+    <p class="archive__item-excerpt" itemprop="description">After the devastating Northern California wildfires, I found myself looking at AirNow multiple times a day. Also at work, like many Bay Area tech companies, ...</p>
   </article>
 </div>
 
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/general/how-to-change-your-auxiliary-battery-on-your-lr4/" rel="permalink">How to change your auxiliary battery on your LR4
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2020-12-06T00:00:00-08:00">December 6, 2020</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">I probably am one of the few who likes the ECO functionality on my LR4. You stop, the engine stops. Simple. Until it doesn’t…
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/general/dishwasher-parts-nightmare/" rel="permalink">GE Dishwasher parts nightmare!
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2020-11-14T00:00:00-08:00">November 14, 2020</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">We have a GE dishwasher. Model number: PDWT380R10SS. It’s one of those that has “touch buttons” on the lid.
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/general/new-blog/" rel="permalink">New Blog!
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2020-11-08T00:00:00-08:00">November 8, 2020</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">I decided to say good bye to Wordpress today. Let’s see if I will regret this decision in the long run. :)
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/general/apple-watch-radio/" rel="permalink">Apple watch radio
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2020-05-01T20:16:36-07:00">May 1, 2020</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">If you’re like me and you have the radio app not working and your Apple Watch is saying: “Sign in to your Apple ID in General in the Apple Watch app on your ...</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/general/so-you-lost-a-disk-on-a-md-raid5-array-now-what/" rel="permalink">So you lost a disk on a MD RAID5 array, now what?
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2020-04-28T16:47:21-07:00">April 28, 2020</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">It happens, you just lost a disk on your RAID5 MD array, or things are not how it should look like… How do we troubleshoot this?
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/general/run-pihole-without-raspberry-pi/" rel="permalink">Run pihole without raspberry pi
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2019-11-16T10:38:02-08:00">November 16, 2019</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">I have few 24/7 running linux boxes at home. I wanted to try pi-hole. But I really didn’t want to add another computer (raspberry pi) on my network.
-</p>
-  </article>
-</div>
-
-  
-    
 
 
 
@@ -703,6 +626,7 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
         <time datetime="2018-04-06T09:37:58-07:00">April 6, 2018</time>
       </span>
     
@@ -732,8 +656,6 @@ Uploads...</p>
   </article>
 </div>
 
-  
-    
 
 
 
@@ -742,7 +664,7 @@ Uploads...</p>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/general/air_quality_index_bot/" rel="permalink">Air Quality Index Bot
+        <a href="/general/run-pihole-without-raspberry-pi/" rel="permalink">Run pihole without raspberry pi
 </a>
       
     </h2>
@@ -753,7 +675,8 @@ Uploads...</p>
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2017-10-16T21:09:45-07:00">October 16, 2017</time>
+        
+        <time datetime="2019-11-16T10:38:02-08:00">November 16, 2019</time>
       </span>
     
 
@@ -773,25 +696,65 @@ Uploads...</p>
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">After the devastating Northern California wildfires, I found myself looking at AirNow multiple times a day. Also at work, like many Bay Area tech companies, ...</p>
+    <p class="archive__item-excerpt" itemprop="description">I have few 24/7 running linux boxes at home. I wanted to try pi-hole. But I really didn’t want to add another computer (raspberry pi) on my network.
+</p>
   </article>
 </div>
 
-  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/general/so-you-lost-a-disk-on-a-md-raid5-array-now-what/" rel="permalink">So you lost a disk on a MD RAID5 array, now what?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-04-28T16:47:21-07:00">April 28, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">It happens, you just lost a disk on your RAID5 MD array, or things are not how it should look like… How do we troubleshoot this?
+</p>
+  </article>
+</div>
+
 </div>
 
 
-<nav class="pagination">
   
+    <nav class="pagination">
   <ul>
     
     
-    <li><a href="#" class="disabled"><span aria-hidden="true">Previous</span></a></li>
-    
-
-    
-    
-      <li><a href="#" class="disabled current">1</a></li>
+      <li><a href="#" class="disabled"><span aria-hidden="true">Previous</span></a></li>
     
 
     
@@ -799,33 +762,48 @@ Uploads...</p>
 
     
     
-    
-
-    
-
-    
-    
-
-    
-      <li><a href="/page2/">2</a></li>
+      
+        <li><a href="#" class="disabled current">1</a></li>
+      
     
 
     
     
-      <li><a href="/page2/">Next</a></li>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+        <li><a href="/page/2/">2</a></li>
+      
+    
+
+    
+    
+      <li><a href="/page/2/">Next</a></li>
     
   </ul>
 </nav>
+
+  
 
 
 
   </div>
 </div>
+
+      
     </div>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
@@ -841,7 +819,9 @@ Uploads...</p>
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+        
+
+<div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
@@ -871,11 +851,14 @@ Uploads...</p>
       
     
 
-    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2023 Emre Sağlam. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://blog.emresaglam.com">eBlog</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -889,7 +872,6 @@ Uploads...</p>
 <script src="/assets/js/lunr/lunr.min.js"></script>
 <script src="/assets/js/lunr/lunr-store.js"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
-
 
 
 
